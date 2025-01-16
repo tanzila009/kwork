@@ -8,5 +8,4 @@ main = Router()
 
 @main.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
-    markup = await categories_list_inline()
-    await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!" , reply_markup=markup)
+    await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!" )

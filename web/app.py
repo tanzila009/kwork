@@ -9,7 +9,7 @@ from web.provider import UsernameAndPasswordProvider
 
 app = Starlette()
 admin = Admin(db._engine,
-              title="P28 Admin",
+              title="Kwork Admin",
               base_url= "/",
               auth_provider=UsernameAndPasswordProvider(),
               middlewares=[Middleware(SessionMiddleware, secret_key="sdgfhjhhsfdghn")]
