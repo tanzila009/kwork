@@ -1,0 +1,26 @@
+version: "2.32.4"
+
+
+services:
+  bot:
+    build: .
+    image: referal_bot:alpine
+    container_name: refbot_con
+    restart: always
+    command: sh -c "python3 main.py"
+    depends_on:
+      - tanzila_pg27
+
+  tanzila_pg27:
+    image: postgres:alpine
+    container_name: tanzila_ref_pg
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+volumes:
+  pgdata:
+

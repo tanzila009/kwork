@@ -1,0 +1,43 @@
+------------------- DOCKER DOWNLOAD --------------------
+1) docker engine           100 mb
+2) docker desktop(engine)  1 GB
+
+search : docker engine install command for linux terminal
+search : docker desktop install command for windows
+search : docker desktop install command for mac
+
+sudo systemctl start docker
+sudo systemctl stop docker
+sudo systemctl status docker
+sudo systemctl restart docker
+
+------------------- DOCKER COMMANDS ------------------------
+docker -
+    Dockerfile - projectni -> image
+    Image      - image -> container
+    Container  - app up
+    Volume     - app dan chiqqan datalar saqlanadigan joy
+
+
+image commands:
+    docker images                         - imagelar listi
+    docker rmi -f [name,id]               - image ni o'chiradi
+    docker rmi -f $(docker images -aq)    - hamma imagelar o'chadi
+    docker pull image_name:tag            - imagelarni yuklab olish
+
+
+container commands:
+    docker run -it --name pg -e POSTGRES_PASSWORD=1 -p 5432:5432 -d postgres:alpine
+    docker ps             - run contrainerlar listini ko'rsatadi
+    docker ps -a          - all contrainerlar listini ko'rsatadi
+    docker rm [name,id]   - containerni o'chiradi
+    docker stop [name,id] - containerni to'xtatadi
+    docker start [name,id] - containerni ishga tushuradi
+    docker restart [name,id] - containerni to'xtatib qaytadan ishga tushuradi
+
+
+
+
+
+
+

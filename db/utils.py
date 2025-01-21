@@ -73,5 +73,3 @@ class CreatedModel(Base, AbstractClass):
 
     __abstract__ = True
     id = Column(Integer,primary_key=True,autoincrement=True)
-    created_at = Column(DateTime(timezone=True), server_default=text(tz))
-    updated_at = Column(DateTime(timezone=True), server_default=text(tz),onupdate=func.now())
